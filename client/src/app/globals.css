@@ -274,7 +274,7 @@ body {
 [data-amplify-authenticator] {
   --amplify-components-button-primary-background-color: hsl(var(--primary));
   --amplify-components-button-primary-hover-background-color: hsl(
-          var(--primary) / 0.9
+    var(--primary) / 0.9
   );
   --amplify-components-button-border-radius: var(--radius);
   --amplify-components-fieldcontrol-border-radius: var(--radius);
