@@ -46,7 +46,7 @@ const Navbar = () => {
           )}
           <Link
             href="/"
-            className="hover:!text-primary-300 cursor-pointer"
+            className="hover:text-primary-300! cursor-pointer"
             scroll={false}
           >
             <div className="flex items-center gap-3">
@@ -59,7 +59,7 @@ const Navbar = () => {
               />
               <div className="text-xl font-bold">
                 RENT
-                <span className="text-secondary-500 hover:!text-primary-300 font-light">
+                <span className="text-secondary-500 hover:text-primary-300! font-light">
                   IFUL
                 </span>
               </div>
@@ -113,7 +113,10 @@ const Navbar = () => {
               <DropdownMenu>
                 <DropdownMenuTrigger className="flex items-center gap-2 focus:outline-none">
                   <Avatar>
-                    <AvatarImage src={authUser.userInfo?.image} />
+                    <AvatarImage
+                      src={authUser.userInfo?.image}
+                      alt="user photo"
+                    />
                     <AvatarFallback className="bg-primary-600">
                       {authUser.userRole?.[0].toUpperCase()}
                     </AvatarFallback>
@@ -124,7 +127,7 @@ const Navbar = () => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="text-primary-700 bg-white">
                   <DropdownMenuItem
-                    className="hover:!bg-primary-700 hover:!text-primary-100 cursor-pointer font-bold"
+                    className="hover:bg-primary-700! hover:text-primary-100! cursor-pointer font-bold"
                     onClick={() =>
                       router.push(
                         authUser.userRole?.toLowerCase() === "manager"
@@ -138,7 +141,7 @@ const Navbar = () => {
                   </DropdownMenuItem>
                   <DropdownMenuSeparator className="bg-primary-200" />
                   <DropdownMenuItem
-                    className="hover:!bg-primary-700 hover:!text-primary-100 cursor-pointer"
+                    className="hover:bg-primary-700! hover:text-primary-100! cursor-pointer"
                     onClick={() =>
                       router.push(
                         `/${authUser.userRole?.toLowerCase()}s/settings`,
@@ -149,7 +152,7 @@ const Navbar = () => {
                     Settings
                   </DropdownMenuItem>
                   <DropdownMenuItem
-                    className="hover:!bg-primary-700 hover:!text-primary-100 cursor-pointer"
+                    className="hover:bg-primary-700! hover:text-primary-100! cursor-pointer"
                     onClick={handleSignOut}
                   >
                     Sign out
