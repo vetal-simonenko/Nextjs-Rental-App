@@ -24,3 +24,5 @@ client/.next/
 node_modules
 /.idea/
 /asset-download/
+/server/src/generated/
+/server/prisma/migrations/
