@@ -74,6 +74,7 @@ const HeroSection = () => {
 
           <div className="flex justify-center">
             <Input
+              aria-label="search"
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
